@@ -21,7 +21,7 @@ const conversations = [
 
 const ChatPage = () => {
 	const session = useSession()
-	const [sidebarOpen, setSidebarOpen] = useState<boolean>(true)
+	const [sidebarOpen, setSidebarOpen] = useState<boolean>(false)
 	const isWorldID = useMemo(() => session?.data?.isWorldID, [session])
 
 	const logoutUrl = useMemo(() => {
