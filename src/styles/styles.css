@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	@apply h-full;
+}
+
+.btn {
+	@apply pointer-events-auto border rounded border-transparent items-center py-2 px-3;
+}
+
+.btn-primary {
+	@apply bg-primary text-white;
+}
+
+@font-face {
+	font-family: 'Söhne';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Sohne-Buch.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Söhne';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/Sohne-Halbfett.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Söhne Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/SohneMono-Buch.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Söhne Mono';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/SohneMono-Halbfett.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Signifier';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Signifier-Regular.otf') format('opentype');
+}
