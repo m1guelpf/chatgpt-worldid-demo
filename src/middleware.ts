@@ -3,10 +3,6 @@ import { withAuth } from 'next-auth/middleware'
 
 export default withAuth(
 	req => {
-		if (req.nextUrl.pathname.startsWith('/api')) {
-			return NextResponse.next()
-		}
-
 		if (req.nextauth.token && req.nextUrl.pathname == '/auth/login') {
 			return NextResponse.redirect(new URL('/', req.url))
 		}
@@ -21,3 +17,7 @@ export default withAuth(
 	},
 	{ callbacks: { authorized: () => true } }
 )
+
+export const config = {
+	matcher: ['/auth/login', '/', '/chat'],
+}
