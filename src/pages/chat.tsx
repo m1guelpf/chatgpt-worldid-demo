@@ -16,13 +16,16 @@ const conversations = [
 	'New chat',
 	'Printing ChatGPTs weights and doing inference manually',
 	'New chat',
-	"How to shill World ID to Sam's friends",
+	'Nintendo Game Boy Camera',
+	'IKEA Restaurant Concept Explained',
+	'LED Filament Bulb Inquiry',
+	'How to pitch World ID to OpenAI',
 ]
 
 const ChatPage = () => {
-	const session = useSession()
+	const { data: session } = useSession()
 	const [sidebarOpen, setSidebarOpen] = useState<boolean>(false)
-	const isWorldID = useMemo(() => session?.data?.isWorldID, [session])
+	const isWorldID = useMemo(() => session?.isWorldID, [session])
 
 	const logoutUrl = useMemo(() => {
 		if (typeof window === 'undefined') return '/'
@@ -249,16 +252,11 @@ const ChatPage = () => {
 								</div>
 							</form>
 							<div className="px-3 pt-2 pb-3 text-center text-xs text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
-								<a
-									href="https://id.worldcoin.org"
-									target="_blank"
-									rel="noreferrer"
-									className="underline"
-								>
-									ChatGPT Worldcoin Version
+								<a href="https://docs.world.org" target="_blank" rel="noreferrer" className="underline">
+									ChatGPT World Version
 								</a>
 								. Example Demo Preview. This doesn&apos;t actually work and is just an example to
-								demonstrate Sign in with Worldcoin.
+								demonstrate Sign in with World.
 							</div>
 						</div>
 					</main>
