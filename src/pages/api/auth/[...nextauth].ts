@@ -14,6 +14,7 @@ export default NextAuth({
 			clientId: process.env.AUTH0_CLIENT_ID!,
 			issuer: process.env.NEXT_PUBLIC_AUTH0_ISSUER,
 			clientSecret: process.env.AUTH0_CLIENT_SECRET!,
+			checks: 'none'
 		}),
 	],
 })
