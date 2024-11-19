@@ -14,7 +14,9 @@ const Login = () => {
 					<button onClick={() => signIn('auth0')} className="btn flex justify-center gap-2 btn-primary">
 						Log in
 					</button>
-					<button className="btn flex justify-center gap-2 btn-primary">Sign up</button>
+					<button onClick={() => signIn('auth0')} className="btn flex justify-center gap-2 btn-primary">
+						Sign up
+					</button>
 				</div>
 			</div>
 		</div>
